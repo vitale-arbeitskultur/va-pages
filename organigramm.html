@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Organigramm Vitale Arbeitskultur - Interaktive soziokratische Kreisorganisation">
+    <meta name="author" content="Vitale Arbeitskultur">
+    <title>Organigramm | Vitale Arbeitskultur</title>
+
+    <!-- Design Tokens -->
+    <link rel="stylesheet" href="css/va-tokens.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/va-styles.css">
+
+    <!-- Cytoscape.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+
+    <style>
+        .org-diagram {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        #organigramm-container {
+            width: 100%;
+            height: 800px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 2rem 0;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .control-btn {
+            padding: 0.5rem 1.5rem;
+            background: var(--color-brand-primary);
+            color: var(--color-brand-secondary);
+            border: none;
+            border-radius: 4px;
+            font-weight: var(--font-weight-bold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: var(--font-size-sm);
+        }
+
+        .control-btn:hover {
+            background: var(--color-brand-secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        #rolle-details {
+            display: none;
+            background: #f9f9f9;
+            border-left: 4px solid var(--color-brand-accent);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+        }
+
+        #org-stats {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .legend {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .legend-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .legend-kreis {
+            background: white;
+            border: 4px solid var(--color-brand-primary);
+        }
+
+        .legend-rolle {
+            background: var(--color-brand-accent);
+        }
+
+        .legend-link {
+            background: var(--color-brand-accent);
+            width: 20px;
+            height: 20px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #21474D 0%, #2a5960 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .info-box h3 {
+            color: var(--color-brand-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #organigramm-container {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/VA-Logo-White.png" alt="Vitale Arbeitskultur" style="height: 140px; width: auto;">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="systemarchitektur.html">Systemarchitektur</a></li>
+                    <li><a href="va-os.html">VA-OS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">Interaktives Organigramm</h1>
+                <p class="text-center" style="font-size: var(--font-size-base); margin-top: 1rem; color: var(--color-neutral-gray);">
+                    Soziokratische Kreisorganisation von Vitale Arbeitskultur
+                </p>
+            </div>
+        </section>
+
+        <section class="section-narrow">
+            <div class="container">
+                <div class="org-diagram">
+
+                    <!-- Info Box -->
+                    <div class="info-box">
+                        <h3>💡 Interaktive Visualisierung</h3>
+                        <p style="font-size: var(--font-size-sm); margin: 0;">
+                            Klicken Sie auf <strong>Kreise</strong> oder <strong>Rollen</strong>, um Details anzuzeigen.
+                            Zoomen und navigieren Sie mit der Maus. Die Struktur wird dynamisch aus einer JSON-Datei geladen.
+                        </p>
+                    </div>
+
+                    <!-- Statistiken -->
+                    <div id="org-stats"></div>
+
+                    <!-- Steuerungs-Buttons -->
+                    <div class="controls">
+                        <button class="control-btn" onclick="resetView()">↻ Ansicht zurücksetzen</button>
+                        <button class="control-btn" onclick="zoomIn()">🔍 Vergrößern</button>
+                        <button class="control-btn" onclick="zoomOut()">🔍 Verkleinern</button>
+                        <a href="data/organigramm.json" class="control-btn" download style="text-decoration: none; display: inline-block;">
+                            📥 JSON herunterladen
+                        </a>
+                    </div>
+
+                    <!-- Cytoscape Container -->
+                    <div id="organigramm-container"></div>
+
+                    <!-- Details-Panel -->
+                    <div id="rolle-details"></div>
+
+                    <!-- Legende -->
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-circle legend-kreis"></div>
+                            <span><strong>Gelber Kreis:</strong> Soziokratischer Kreis</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-circle legend-rolle"></div>
+                            <span><strong>Roter Kreis:</strong> Rolle innerhalb des Kreises</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-circle legend-link"></div>
+                            <span><strong>Kleine rote Kreise:</strong> Doppelte Verlinkung</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <!-- Erklärungen -->
+                <div class="card">
+                    <h2>Soziokratische Prinzipien</h2>
+                    <p>
+                        Die Organisationsstruktur von Vitale Arbeitskultur basiert auf soziokratischen Prinzipien:
+                    </p>
+                    <ul style="list-style-position: inside; line-height: 2; margin-top: 1rem;">
+                        <li><strong>Kreisorganisation:</strong> Autonome Kreise (gelb) mit klaren Verantwortungsbereichen</li>
+                        <li><strong>Rollen:</strong> Konkrete Aufgaben und Verantwortlichkeiten (rot) innerhalb der Kreise</li>
+                        <li><strong>Doppelte Verlinkung:</strong> Verbindung zwischen Kreisen durch Link-Rollen</li>
+                        <li><strong>Konsentprinzip:</strong> Entscheidungen werden im Konsent getroffen (kein schwerwiegender Einwand)</li>
+                    </ul>
+                </div>
+
+                <!-- JSON-Datenstruktur -->
+                <div class="card" style="margin-top: 2rem; background-color: #f9f9f9; border-color: var(--color-brand-secondary);">
+                    <h2>📝 Datenbasiertes Organigramm</h2>
+                    <p>
+                        Dieses Organigramm wird dynamisch aus einer <strong>JSON-Datei</strong> generiert:
+                        <a href="data/organigramm.json" style="color: var(--color-brand-primary);" download>
+                            data/organigramm.json
+                        </a>
+                    </p>
+
+                    <h3 style="margin-top: 1.5rem; font-size: var(--font-size-base);">Struktur bearbeiten</h3>
+                    <p style="margin-top: 1rem;">
+                        <strong>1. Kreis hinzufügen:</strong>
+                    </p>
+                    <pre style="background: white; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 12px;"><code>{
+  "id": "neuer-kreis",
+  "name": "Neuer Kreis",
+  "short": "NEUER KREIS",
+  "position": { "x": 400, "y": 300 },
+  "rollen": [
+    { "id": "rolle-1", "name": "Rolle 1" },
+    { "id": "rolle-2", "name": "Rolle 2" }
+  ]
+}</code></pre>
+
+                    <p style="margin-top: 1rem;">
+                        <strong>2. Rolle hinzufügen:</strong>
+                    </p>
+                    <pre style="background: white; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 12px;"><code>{
+  "id": "neue-rolle",
+  "name": "Neue Rolle"
+}</code></pre>
+
+                    <p style="margin-top: 1rem;">
+                        <strong>3. Änderungen committen:</strong><br>
+                        Die JSON-Datei befindet sich unter <code>docs/data/organigramm.json</code>.
+                        Änderungen werden beim nächsten Deployment automatisch übernommen.
+                    </p>
+                </div>
+
+                <!-- Technische Details -->
+                <div class="card" style="margin-top: 2rem;">
+                    <h2>🔧 Technische Details</h2>
+                    <ul style="list-style-position: inside; line-height: 2;">
+                        <li><strong>Bibliothek:</strong> Cytoscape.js (Graph-Visualisierung)</li>
+                        <li><strong>Datenformat:</strong> JSON</li>
+                        <li><strong>Interaktivität:</strong> Klickbare Kreise und Rollen, Zoom, Pan</li>
+                        <li><strong>Responsive:</strong> Funktioniert auf allen Bildschirmgrößen</li>
+                        <li><strong>Performance:</strong> Optimiert für schnelles Rendering</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vitale Arbeitskultur</h3>
+                    <p>Wir gestalten lebendige und nachhaltige Arbeitskultur – für Menschen, die mehr wollen als nur funktionieren.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="https://vitale-arbeitskultur.de">Hauptwebseite</a></li>
+                        <li><a href="systemarchitektur.html">Systemarchitektur</a></li>
+                        <li><a href="va-os.html">VA-OS Konzept</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="mailto:kontakt@vitale-arbeitskultur.de">kontakt@vitale-arbeitskultur.de</a></li>
+                        <li>Web: <a href="https://vitale-arbeitskultur.de" target="_blank">vitale-arbeitskultur.de</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vitale Arbeitskultur. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/organigramm.js"></script>
+    <script>
+        // Steuerungs-Funktionen
+        function resetView() {
+            const cy = cytoscape.instances()[0];
+            if (cy) {
+                cy.fit();
+                cy.center();
+            }
+        }
+
+        function zoomIn() {
+            const cy = cytoscape.instances()[0];
+            if (cy) {
+                cy.zoom(cy.zoom() * 1.2);
+            }
+        }
+
+        function zoomOut() {
+            const cy = cytoscape.instances()[0];
+            if (cy) {
+                cy.zoom(cy.zoom() * 0.8);
+            }
+        }
+    </script>
+</body>
+</html>

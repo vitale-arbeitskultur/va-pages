@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VA-OS - Das Betriebssystem für Vitale Arbeitskultur">
+    <meta name="author" content="Vitale Arbeitskultur">
+    <title>VA-OS Konzept | Vitale Arbeitskultur</title>
+
+    <!-- Design Tokens -->
+    <link rel="stylesheet" href="css/va-tokens.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/va-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/VA-Logo-White.png" alt="Vitale Arbeitskultur" style="height: 140px; width: auto;">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="systemarchitektur.html">Systemarchitektur</a></li>
+                    <li><a href="va-os.html" class="active">VA-OS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">VA-OS <span class="text-primary">Konzept</span></h1>
+                <p class="text-center" style="font-size: var(--font-size-base); margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: var(--color-neutral-gray);">
+                    Unser neues Betriebssystem – von der Nutzerebene bis zur Infrastruktur.
+                    Ein System, das mit uns wächst und unsere Arbeitskultur digital abbildet.
+                </p>
+            </div>
+        </section>
+
+        <!-- Was ist VA-OS? -->
+        <section class="section-narrow">
+            <div class="container">
+                <div class="card">
+                    <h2>Was ist VA-OS?</h2>
+                    <p>
+                        VA-OS ist das <strong>Operating System</strong> für Vitale Arbeitskultur –
+                        eine umfassende Systemarchitektur, die alle unsere Prozesse, Tools und
+                        Arbeitsweisen digital abbildet und miteinander verbindet.
+                    </p>
+                    <p>
+                        Unser Ziel ist es, ein durchgängiges System zu schaffen, das:
+                    </p>
+                    <ul style="margin-left: 2rem; line-height: 1.8;">
+                        <li>Unsere Arbeitsweise unterstützt statt zu behindern</li>
+                        <li>Alle Daten an einer zentralen Stelle verwaltet</li>
+                        <li>Transparent und nachvollziehbar ist</li>
+                        <li>Mit KI-Unterstützung arbeitet</li>
+                        <li>Mit unserer Organisation wächst</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drei Grundprinzipien -->
+        <section class="section-narrow">
+            <div class="container">
+                <h2 class="text-center" style="margin-bottom: 3rem;">Drei <span class="text-primary">Grundprinzipien</span></h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                    <!-- Prinzip 1: SSOT -->
+                    <div class="card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <svg width="80" height="80" viewBox="0 0 80 80" style="margin: 0 auto;">
+                                <circle cx="40" cy="40" r="35" fill="none" stroke="var(--color-brand-primary)" stroke-width="4"/>
+                                <circle cx="40" cy="40" r="20" fill="var(--color-brand-primary)"/>
+                                <line x1="40" y1="5" x2="40" y2="20" stroke="var(--color-brand-primary)" stroke-width="3"/>
+                                <line x1="40" y1="60" x2="40" y2="75" stroke="var(--color-brand-primary)" stroke-width="3"/>
+                                <line x1="5" y1="40" x2="20" y2="40" stroke="var(--color-brand-primary)" stroke-width="3"/>
+                                <line x1="60" y1="40" x2="75" y2="40" stroke="var(--color-brand-primary)" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-center">Single Point of Truth</h3>
+                        <p style="text-align: center; color: var(--color-neutral-gray);">
+                            <strong>Eine zentrale Datenquelle</strong> für alle Informationen.
+                            Keine Dopplungen, keine Widersprüche.
+                        </p>
+                        <p style="text-align: center; font-size: var(--font-size-sm); margin-top: 1rem;">
+                            Aktuell: Coda<br>
+                            Zukunft: Directus (open-source)
+                        </p>
+                    </div>
+
+                    <!-- Prinzip 2: Everything as Code -->
+                    <div class="card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <svg width="80" height="80" viewBox="0 0 80 80" style="margin: 0 auto;">
+                                <rect x="10" y="10" width="60" height="60" fill="none" stroke="var(--color-brand-secondary)" stroke-width="4" rx="5"/>
+                                <line x1="20" y1="25" x2="45" y2="25" stroke="var(--color-brand-secondary)" stroke-width="3"/>
+                                <line x1="20" y1="35" x2="55" y2="35" stroke="var(--color-brand-secondary)" stroke-width="3"/>
+                                <line x1="20" y1="45" x2="40" y2="45" stroke="var(--color-brand-secondary)" stroke-width="3"/>
+                                <line x1="20" y1="55" x2="50" y2="55" stroke="var(--color-brand-secondary)" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-center">Everything as Code</h3>
+                        <p style="text-align: center; color: var(--color-neutral-gray);">
+                            Das <strong>gesamte System in Git</strong>.
+                            Keine Click-Konfigurationen. Alles reproduzierbar und versioniert.
+                        </p>
+                        <p style="text-align: center; font-size: var(--font-size-sm); margin-top: 1rem;">
+                            Versionskontrolle ✓<br>
+                            Nachvollziehbar ✓<br>
+                            Wiederherstellbar ✓
+                        </p>
+                    </div>
+
+                    <!-- Prinzip 3: AI-First -->
+                    <div class="card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <svg width="80" height="80" viewBox="0 0 80 80" style="margin: 0 auto;">
+                                <circle cx="40" cy="40" r="30" fill="none" stroke="var(--color-brand-accent)" stroke-width="4"/>
+                                <circle cx="30" cy="35" r="5" fill="var(--color-brand-accent)"/>
+                                <circle cx="50" cy="35" r="5" fill="var(--color-brand-accent)"/>
+                                <path d="M 25 50 Q 40 60 55 50" fill="none" stroke="var(--color-brand-accent)" stroke-width="3"/>
+                                <line x1="40" y1="10" x2="40" y2="25" stroke="var(--color-brand-accent)" stroke-width="2"/>
+                                <circle cx="40" cy="10" r="3" fill="var(--color-brand-accent)"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-center">AI-First Workflows</h3>
+                        <p style="text-align: center; color: var(--color-neutral-gray);">
+                            <strong>KI-Integration</strong> in allen Prozessen.
+                            Unterstützung durch Large Language Models wo sinnvoll.
+                        </p>
+                        <p style="text-align: center; font-size: var(--font-size-sm); margin-top: 1rem;">
+                            Automatisierung ✓<br>
+                            Assistenz ✓<br>
+                            Effizienz ✓
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Architektur: 5 Schichten -->
+        <section class="section-narrow">
+            <div class="container">
+                <h2 class="text-center" style="margin-bottom: 3rem;">Architektur in <span class="text-primary">5 Schichten</span></h2>
+
+                <div class="card" style="max-width: 900px; margin: 0 auto;">
+                    <p style="text-align: center; margin-bottom: 2rem; color: var(--color-neutral-gray);">
+                        Von der Nutzerebene bis zur Infrastruktur – jede Schicht hat ihre Aufgabe.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+                        <!-- Layer 1 -->
+                        <div style="padding: 1.5rem; background: var(--color-brand-primary); color: white; border-radius: 8px;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: white;">1. Nutzerebene</h4>
+                            <p style="margin: 0; font-size: var(--font-size-sm); opacity: 0.9;">
+                                Komplizen, Kunden & Partner – Wie Menschen mit dem System interagieren
+                            </p>
+                        </div>
+
+                        <!-- Layer 2 -->
+                        <div style="padding: 1.5rem; background: var(--color-brand-secondary); color: white; border-radius: 8px;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: white;">2. Anwendungsebene</h4>
+                            <p style="margin: 0; font-size: var(--font-size-sm); opacity: 0.9;">
+                                Auftragsbearbeitung, Wissensmanagement, Zeiterfassung, Buchhaltung
+                            </p>
+                        </div>
+
+                        <!-- Layer 3 -->
+                        <div style="padding: 1.5rem; background: var(--color-brand-accent); color: white; border-radius: 8px;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: white;">3. Integrationsebene</h4>
+                            <p style="margin: 0; font-size: var(--font-size-sm); opacity: 0.9;">
+                                APIs, Workflows, Automatisierung – Wie Systeme verbunden sind
+                            </p>
+                        </div>
+
+                        <!-- Layer 4 -->
+                        <div style="padding: 1.5rem; background: #8B7355; color: white; border-radius: 8px;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: white;">4. Datenebene</h4>
+                            <p style="margin: 0; font-size: var(--font-size-sm); opacity: 0.9;">
+                                Single Point of Truth – Zentrale Datenhaltung & Verwaltung
+                            </p>
+                        </div>
+
+                        <!-- Layer 5 -->
+                        <div style="padding: 1.5rem; background: #4A6572; color: white; border-radius: 8px;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: white;">5. Infrastrukturebene</h4>
+                            <p style="margin: 0; font-size: var(--font-size-sm); opacity: 0.9;">
+                                Server, Deployment & Betrieb – Die technische Grundlage
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aktueller Stand -->
+        <section class="section-narrow">
+            <div class="container">
+                <div class="card" style="background: #F8F9FA; border-left: 4px solid var(--color-brand-primary);">
+                    <h2>Aktueller Stand</h2>
+                    <ul style="margin-left: 2rem; line-height: 2;">
+                        <li>✅ Konzept dokumentiert</li>
+                        <li>✅ Dokumentationsstruktur erstellt (~91 Dateien)</li>
+                        <li>✅ Versionierungssystem etabliert</li>
+                        <li>🔄 Schrittweise Umsetzung geplant</li>
+                        <li>💬 Feedback von allen Komplizen erwünscht</li>
+                    </ul>
+                    <p style="margin-top: 2rem;">
+                        <strong>Nächste Schritte:</strong> Wir füllen die Dokumentation Schritt für Schritt
+                        mit konkreten Inhalten, während wir gemeinsam Entscheidungen über Design und
+                        Umsetzung treffen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback -->
+        <section class="section-narrow" style="background: var(--color-brand-primary); color: white; padding: 4rem 0;">
+            <div class="container">
+                <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                    <h2 style="color: white; margin-bottom: 1.5rem;">Deine Meinung ist gefragt!</h2>
+                    <p style="font-size: var(--font-size-base); margin-bottom: 2rem; opacity: 0.95;">
+                        VA-OS wächst mit uns. Wir möchten dein Feedback zu diesem Konzept:
+                    </p>
+                    <ul style="text-align: left; margin: 2rem auto; max-width: 500px; line-height: 2; opacity: 0.95;">
+                        <li>Was findest du gut?</li>
+                        <li>Was fehlt deiner Meinung nach?</li>
+                        <li>Welche Bedenken hast du?</li>
+                        <li>Welche Ideen hast du?</li>
+                    </ul>
+                    <p style="margin-top: 2.5rem;">
+                        <strong>Kontakt:</strong>
+                        <a href="mailto:kontakt@vitale-arbeitskultur.de" style="color: white; text-decoration: underline;">
+                            kontakt@vitale-arbeitskultur.de
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-brand-secondary); color: white; padding: 3rem 0; margin-top: 4rem;">
+        <div class="container">
+            <div style="text-align: center;">
+                <p style="margin: 0; opacity: 0.9;">
+                    © 2025 Vitale Arbeitskultur |
+                    <a href="https://vitale-arbeitskultur.de" style="color: white; text-decoration: underline;" target="_blank">
+                        vitale-arbeitskultur.de
+                    </a>
+                </p>
+                <p style="margin-top: 1rem; font-size: var(--font-size-sm); opacity: 0.8;">
+                    VA-OS Konzept – Version 0.1 | Stand: Dezember 2025
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

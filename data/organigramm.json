@@ -1,0 +1,95 @@
+{
+  "organisation": {
+    "name": "Vitale Arbeitskultur",
+    "links": [
+      {
+        "name": "Projektschafferin"
+      },
+      {
+        "name": "Kompliz:in"
+      }
+    ]
+  },
+  "kreise": [
+    {
+      "id": "org-entwicklung",
+      "name": "Organisationsentwicklung",
+      "zweck": "Entwicklung und Begleitung von Veränderungsprozessen in Organisationen",
+      "parent": null,
+      "rollen": [
+        {
+          "id": "oe-facilitation",
+          "name": "Facilitat:in"
+        },
+        {
+          "id": "oe-beratung",
+          "name": "Beratung"
+        }
+      ]
+    },
+    {
+      "id": "administration",
+      "name": "Administration",
+      "zweck": "Verwaltung, Finanzen und operative Prozesse der Organisation",
+      "parent": null,
+      "rollen": [
+        {
+          "id": "admin-gf",
+          "name": "Geschäftsführung"
+        },
+        {
+          "id": "admin-it",
+          "name": "IT"
+        },
+        {
+          "id": "admin-vertrieb",
+          "name": "Vertrieb"
+        },
+        {
+          "id": "admin-kunden",
+          "name": "Kundenbetreuung"
+        },
+        {
+          "id": "admin-finanzen",
+          "name": "Finanzen"
+        },
+        {
+          "id": "admin-marketing",
+          "name": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "coaching",
+      "name": "Coaching",
+      "zweck": "Individuelles und Team-Coaching für nachhaltige Entwicklung",
+      "parent": null,
+      "rollen": [
+        {
+          "id": "coaching-coach",
+          "name": "Coach"
+        }
+      ]
+    },
+    {
+      "id": "digitalisierung",
+      "name": "Digitalisierung",
+      "zweck": "Entwicklung digitaler Lösungen und Tools zur Unterstützung der Arbeitsprozesse",
+      "parent": null,
+      "rollen": [
+        {
+          "id": "digi-entwickeln",
+          "name": "Entwickelnd"
+        },
+        {
+          "id": "digi-produkt",
+          "name": "Produktentwickeln"
+        },
+        {
+          "id": "digi-testing",
+          "name": "Testing"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vitale Arbeitskultur - Organisationsstruktur und Systemarchitektur">
+    <meta name="author" content="Vitale Arbeitskultur">
+    <title>Organisationsstruktur | Vitale Arbeitskultur</title>
+
+    <!-- Design Tokens -->
+    <link rel="stylesheet" href="css/va-tokens.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/va-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/VA-Logo-White.png" alt="Vitale Arbeitskultur" style="height: 140px; width: auto;">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="systemarchitektur.html">Systemarchitektur</a></li>
+                    <li><a href="va-os.html">VA-OS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">Organisationsstruktur <span class="text-primary">Vitale Arbeitskultur</span></h1>
+                <p class="text-center" style="font-size: var(--font-size-base); margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: var(--color-neutral-gray);">
+                    Visualisierung der Organisationsstruktur und technischen Systemarchitektur
+                    unserer soziokratisch organisierten Arbeitskultur.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-narrow">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem;">
+
+                    <!-- VA-OS Konzept Card -->
+                    <div class="card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--color-brand-primary); color: white; border-radius: 4px; font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); margin-bottom: 1rem;">ZUKUNFT</span>
+                        </div>
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <svg width="120" height="120" viewBox="0 0 120 120" style="margin: 0 auto;">
+                                <!-- Layers (5 layers) -->
+                                <rect x="20" y="15" width="80" height="18" fill="var(--color-brand-primary)" rx="2"/>
+                                <rect x="20" y="38" width="80" height="18" fill="var(--color-brand-secondary)" rx="2"/>
+                                <rect x="20" y="61" width="80" height="18" fill="var(--color-brand-accent)" rx="2"/>
+                                <rect x="20" y="84" width="80" height="18" fill="#8B7355" rx="2"/>
+                                <rect x="20" y="107" width="80" height="13" fill="#4A6572" rx="2"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-center">VA-OS Konzept</h2>
+                        <p style="text-align: center; margin-bottom: 2rem;">
+                            Unser neues Betriebssystem – von der Nutzerebene bis zur Infrastruktur. Drei Grundprinzipien, fünf Schichten.
+                        </p>
+                        <div style="text-align: center;">
+                            <a href="va-os.html" class="btn btn-primary">Zum VA-OS Konzept →</a>
+                        </div>
+                    </div>
+
+                    <!-- Systemarchitektur Card -->
+                    <div class="card">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--color-brand-secondary); color: white; border-radius: 4px; font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); margin-bottom: 1rem;">AKTUELL</span>
+                        </div>
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <svg width="120" height="120" viewBox="0 0 120 120" style="margin: 0 auto;">
+                                <!-- Zentrale Node -->
+                                <rect x="40" y="40" width="40" height="40" fill="var(--color-brand-primary)" rx="5"/>
+                                <!-- Verbundene Nodes -->
+                                <rect x="5" y="5" width="30" height="30" fill="var(--color-brand-secondary)" rx="3"/>
+                                <rect x="85" y="5" width="30" height="30" fill="var(--color-brand-secondary)" rx="3"/>
+                                <rect x="5" y="85" width="30" height="30" fill="var(--color-brand-secondary)" rx="3"/>
+                                <rect x="85" y="85" width="30" height="30" fill="var(--color-brand-secondary)" rx="3"/>
+                                <!-- Verbindungslinien -->
+                                <line x1="35" y1="20" x2="40" y2="40" stroke="var(--color-brand-accent)" stroke-width="2"/>
+                                <line x1="85" y1="20" x2="80" y2="40" stroke="var(--color-brand-accent)" stroke-width="2"/>
+                                <line x1="35" y1="100" x2="40" y2="80" stroke="var(--color-brand-accent)" stroke-width="2"/>
+                                <line x1="85" y1="100" x2="80" y2="80" stroke="var(--color-brand-accent)" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-center">Systemarchitektur</h2>
+                        <p style="text-align: center; margin-bottom: 2rem;">
+                            Technische Integration zwischen Coda, SevDesk, Brevo, n8n und weiteren Systemen mit automatisierten Workflows.
+                        </p>
+                        <div style="text-align: center;">
+                            <a href="systemarchitektur.html" class="btn btn-secondary">Zur Systemarchitektur →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="card" style="background-color: #f9f9f9; border-color: var(--color-brand-secondary);">
+                    <h2>Über diese Seiten</h2>
+                    <p>
+                        Diese Visualisierungen dienen zur internen Dokumentation und Transparenz über die
+                        Struktur unserer Organisation sowie die technischen Systeme, die unsere Arbeitsprozesse unterstützen.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Vitale Arbeitskultur</strong> arbeitet nach soziokratischen Prinzipien mit einer
+                        Kreisorganisation, die autonome Entscheidungen und klare Verantwortlichkeiten ermöglicht.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vitale Arbeitskultur</h3>
+                    <p>Wir gestalten lebendige und nachhaltige Arbeitskultur – für Menschen, die mehr wollen als nur funktionieren.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="https://vitale-arbeitskultur.de">Hauptwebseite</a></li>
+                        <li><a href="systemarchitektur.html">Systemarchitektur</a></li>
+                        <li><a href="va-os.html">VA-OS Konzept</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul style="list-style: none;">
+                        <li>E-Mail: <a href="mailto:kontakt@vitale-arbeitskultur.de">kontakt@vitale-arbeitskultur.de</a></li>
+                        <li>Web: <a href="https://vitale-arbeitskultur.de" target="_blank">vitale-arbeitskultur.de</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vitale Arbeitskultur. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

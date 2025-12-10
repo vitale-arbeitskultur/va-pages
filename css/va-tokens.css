@@ -1,0 +1,29 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-brand-primary: #efb708;
+  --color-brand-secondary: #21474d;
+  --color-brand-accent: #a63634;
+  --color-neutral-gray: #606060;
+  --color-neutral-black: #000000;
+  --spacing-narrow: 3em;
+  --spacing-default: 5em;
+  --font-family-primary: Trenda;
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-ultra-bold: 900;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 18px;
+  --font-size-lg: 40px;
+  --font-size-xl: 60px;
+  --font-size-2xl: 100px;
+  --typography-title: 900 100px/1.2 Trenda;
+  --typography-heading1: 500 60px/1.2 Trenda;
+  --typography-heading2: 500 60px/1.2 Trenda;
+  --typography-body: 500 18px/1.5 Trenda;
+  --typography-highlight: 700 18px/1.5 Trenda;
+}

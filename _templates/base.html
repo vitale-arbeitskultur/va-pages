@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{DESCRIPTION}}">
+    <meta name="author" content="Vitale Arbeitskultur">
+    <title>{{TITLE}} | Vitale Arbeitskultur</title>
+
+    <!-- Design Tokens -->
+    <link rel="stylesheet" href="../css/va-tokens.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../css/va-styles.css">
+
+    <!-- Optional: Custom Page Styles -->
+    {{EXTRA_CSS}}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">VA</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="{{NAV_HOME}}">Home</a></li>
+                    <li><a href="about.html" class="{{NAV_ABOUT}}">Über uns</a></li>
+                    <li><a href="stats.html" class="{{NAV_STATS}}">Statistiken</a></li>
+                    <li><a href="contact.html" class="{{NAV_CONTACT}}">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {{CONTENT}}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vitale Arbeitskultur</h3>
+                    <p>Wir gestalten lebendige und nachhaltige Arbeitskultur – für Menschen, die mehr wollen als nur funktionieren.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="https://vitale-arbeitskultur.de">Hauptwebseite</a></li>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul style="list-style: none;">
+                        <li>E-Mail: <a href="mailto:kontakt@vitale-arbeitskultur.de">kontakt@vitale-arbeitskultur.de</a></li>
+                        <li>Web: <a href="https://vitale-arbeitskultur.de" target="_blank">vitale-arbeitskultur.de</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vitale Arbeitskultur. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional: Custom Scripts -->
+    {{EXTRA_JS}}
+</body>
+</html>
