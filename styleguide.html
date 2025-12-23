@@ -106,6 +106,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="systemarchitektur.html">Systemarchitektur</a></li>
                     <li><a href="va-os.html">VA-OS</a></li>
+                    <li><a href="buchung.html">Buchung</a></li>
                     <li><a href="styleguide.html" class="active">Styleguide</a></li>
                 </ul>
             </nav>
@@ -291,14 +292,17 @@
             <div class="container">
                 <div class="card">
                     <h2>Abstände (Spacing)</h2>
-                    <p>Konsistente Abstände schaffen visuelle Harmonie.</p>
+                    <p>Konsistente Abstände schaffen visuelle Harmonie. Unser System bietet zwei Varianten:</p>
+
+                    <h3 style="margin-top: 2rem;">Primäre Spacing-Tokens (rem)</h3>
+                    <p><strong>Verwende diese in 95% der Fälle.</strong> Rem-basierte Abstände sind konsistent und vorhersagbar – ideal für Layouts, Grids und strukturelle Elemente.</p>
 
                     <div style="margin: 2rem 0;">
                         <div class="spacing-demo" style="padding: var(--spacing-narrow);">
-                            Narrow Spacing (3em)
+                            Narrow Spacing (3rem = 48px)
                         </div>
                         <div class="spacing-demo" style="padding: var(--spacing-default); margin-top: 1rem;">
-                            Default Spacing (5em)
+                            Default Spacing (5rem = 80px)
                         </div>
                     </div>
 
@@ -313,16 +317,56 @@
                         <tbody>
                             <tr>
                                 <td><code>--spacing-narrow</code></td>
-                                <td>3em</td>
-                                <td>Kompakte Bereiche, enge Layouts</td>
+                                <td>3rem</td>
+                                <td><strong>Standard:</strong> Kompakte Bereiche, Section-Padding, enge Layouts</td>
                             </tr>
                             <tr>
                                 <td><code>--spacing-default</code></td>
-                                <td>5em</td>
-                                <td>Standard-Abschnitte, normale Layouts</td>
+                                <td>5rem</td>
+                                <td><strong>Standard:</strong> Große Sections, Hero-Bereiche, weite Layouts</td>
                             </tr>
                         </tbody>
                     </table>
+
+                    <h3 style="margin-top: 2rem; color: var(--color-neutral-gray);">Typografie-relative Tokens (em) – Optional</h3>
+                    <p style="color: var(--color-neutral-gray);"><strong>Nur bei Bedarf verwenden.</strong> Em-basierte Abstände skalieren mit der Schriftgröße – nützlich für textlastige Dokumente, Zitate oder wenn Spacing proportional zur Textgröße sein soll.</p>
+
+                    <div style="margin: 2rem 0; opacity: 0.7;">
+                        <div class="spacing-demo" style="padding: var(--spacing-text-narrow); font-size: 16px;">
+                            Text Narrow (3em @ 16px = 48px)
+                        </div>
+                        <div class="spacing-demo" style="padding: var(--spacing-text-default); margin-top: 1rem; font-size: 20px;">
+                            Text Default (5em @ 20px = 100px) - skaliert mit Font-Size
+                        </div>
+                    </div>
+
+                    <table class="token-table">
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>Wert</th>
+                                <th>Verwendung</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>--spacing-text-narrow</code></td>
+                                <td>3em</td>
+                                <td><strong>Selten:</strong> Abstände in Blockquotes, Testimonials mit variablen Schriftgrößen</td>
+                            </tr>
+                            <tr>
+                                <td><code>--spacing-text-default</code></td>
+                                <td>5em</td>
+                                <td><strong>Selten:</strong> Abstände in textlastigen Dokumenten, wo Spacing proportional sein soll</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="background: var(--color-brand-primary); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                        <h4 style="margin-top: 0;">💡 Faustregel</h4>
+                        <p style="margin-bottom: 0;"><strong>Layout & Struktur:</strong> Verwende <code>--spacing-narrow</code> / <code>--spacing-default</code> (rem)<br>
+                        <strong>Text-Proportional:</strong> Verwende <code>--spacing-text-narrow</code> / <code>--spacing-text-default</code> (em)</p>
+                    </div>
                 </div>
             </div>
         </section>

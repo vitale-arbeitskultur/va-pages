@@ -8,8 +8,10 @@
   --color-brand-accent: #a63634;
   --color-neutral-gray: #606060;
   --color-neutral-black: #000000;
-  --spacing-narrow: 3em;
-  --spacing-default: 5em;
+  --spacing-narrow: 3rem;
+  --spacing-default: 5rem;
+  --spacing-text-narrow: 3em;
+  --spacing-text-default: 5em;
   --font-family-primary: Trenda;
   --font-weight-light: 300;
   --font-weight-medium: 500;
