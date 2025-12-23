@@ -193,9 +193,9 @@
     <main>
         <section class="section">
             <div class="container">
-                <h1 class="text-center">Meeting-Typen <span class="text-primary">Buchung</span></h1>
+                <h1 class="text-center">Unsere <span class="text-primary">Buchungsplattform</span></h1>
                 <p class="text-center" style="font-size: var(--font-size-base); margin-top: 1rem; color: var(--color-neutral-gray); max-width: 700px; margin-left: auto; margin-right: auto;">
-                    Standardisierte Meeting-Typen für die Cal.com-Buchungsplattform von Vitale Arbeitskultur.
+                    Unsere selbst gehostete Cal.com-Buchungsplattform für Vitale Arbeitskultur.
                     Ein einheitliches und transparentes Buchungssystem für alle Kompliz:innen.
                 </p>
                 <div class="text-center" style="margin-top: 2rem;">
@@ -213,79 +213,408 @@
                     Anleitung zur Einrichtung deines Accounts auf buchung.vitale-arbeitskultur.de
                 </p>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-
-                    <!-- Profil -->
-                    <div class="config-section">
-                        <h3>1. Profil</h3>
-                        <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 1rem;">
-                            Einstellungen &rarr; Mein Konto &rarr; Profil
-                        </p>
-                        <ul class="config-list">
-                            <li><strong>Profilbild:</strong> Verwende dein Bild von der Komplizen-Seite auf vitale-arbeitskultur.de</li>
-                            <li><strong>Vollständiger Name:</strong> Dein voller Name</li>
-                            <li><strong>Benutzername:</strong> <code>vorname-nachname</code> (kleingeschrieben, mit Bindestrich)</li>
-                            <li><strong>Info:</strong> Übernimm deine Rollenbeschreibung von der Komplizen-Seite</li>
-                        </ul>
+                <!-- Step Progress Indicator -->
+                <div class="setup-stepper">
+                    <div class="stepper-progress">
+                        <div class="stepper-step active" data-step="1">
+                            <div class="step-circle">1</div>
+                            <div class="step-label">Login</div>
+                        </div>
+                        <div class="stepper-line"></div>
+                        <div class="stepper-step" data-step="2">
+                            <div class="step-circle">2</div>
+                            <div class="step-label">Profil</div>
+                        </div>
+                        <div class="stepper-line"></div>
+                        <div class="stepper-step" data-step="3">
+                            <div class="step-circle">3</div>
+                            <div class="step-label">Allgemein</div>
+                        </div>
+                        <div class="stepper-line"></div>
+                        <div class="stepper-step" data-step="4">
+                            <div class="step-circle">4</div>
+                            <div class="step-label">Kalender</div>
+                        </div>
+                        <div class="stepper-line"></div>
+                        <div class="stepper-step" data-step="5">
+                            <div class="step-circle">5</div>
+                            <div class="step-label">Konferenzen</div>
+                        </div>
+                        <div class="stepper-line"></div>
+                        <div class="stepper-step" data-step="6">
+                            <div class="step-circle">6</div>
+                            <div class="step-label">Erscheinung</div>
+                        </div>
                     </div>
 
-                    <!-- Allgemein -->
-                    <div class="config-section">
-                        <h3>2. Allgemein</h3>
-                        <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 1rem;">
-                            Einstellungen &rarr; Allgemein
-                        </p>
-                        <ul class="config-list">
-                            <li><strong>Sprache:</strong> Nach Wunsch</li>
-                            <li><strong>Zeitzone:</strong> Nach Wunsch</li>
-                            <li><strong>Zeitformat:</strong> 24-Stunden</li>
-                            <li><strong>Wochenstart:</strong> Montag</li>
-                        </ul>
+                    <!-- Step Content Cards -->
+                    <div class="stepper-content">
+                        <!-- Step 1: Login -->
+                        <div class="step-card active" data-step="1">
+                            <div class="step-card-header">
+                                <h3>Account erstellen</h3>
+                                <p class="step-path">buchung.vitale-arbeitskultur.de</p>
+                            </div>
+                            <div class="step-card-body">
+                                <ul class="config-list">
+                                    <li>Öffne <a href="https://buchung.vitale-arbeitskultur.de" target="_blank">buchung.vitale-arbeitskultur.de</a></li>
+                                    <li>Klicke auf "Registrieren" oder "Sign up"</li>
+                                    <li>Verwende deine <strong>@vitale-arbeitskultur.de</strong> E-Mail-Adresse</li>
+                                    <li>Bestätige deine E-Mail-Adresse über den Aktivierungslink</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Profil -->
+                        <div class="step-card" data-step="2">
+                            <div class="step-card-header">
+                                <h3>Profil einrichten</h3>
+                                <p class="step-path">Einstellungen &rarr; Mein Konto &rarr; Profil</p>
+                            </div>
+                            <div class="step-card-body">
+                                <ul class="config-list">
+                                    <li><strong>Profilbild:</strong> Verwende dein Bild von der Komplizen-Seite auf vitale-arbeitskultur.de</li>
+                                    <li><strong>Vollständiger Name:</strong> Dein voller Name</li>
+                                    <li><strong>Benutzername:</strong> <code>vorname-nachname</code> (kleingeschrieben, mit Bindestrich)</li>
+                                    <li><strong>Info:</strong> Übernimm deine Rollenbeschreibung von der Komplizen-Seite</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Allgemein -->
+                        <div class="step-card" data-step="3">
+                            <div class="step-card-header">
+                                <h3>Allgemeine Einstellungen</h3>
+                                <p class="step-path">Einstellungen &rarr; Allgemein</p>
+                            </div>
+                            <div class="step-card-body">
+                                <ul class="config-list">
+                                    <li><strong>Sprache:</strong> Nach Wunsch</li>
+                                    <li><strong>Zeitzone:</strong> Nach Wunsch</li>
+                                    <li><strong>Zeitformat:</strong> 24-Stunden</li>
+                                    <li><strong>Wochenstart:</strong> Montag</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Kalender -->
+                        <div class="step-card" data-step="4">
+                            <div class="step-card-header">
+                                <h3>Kalender verbinden</h3>
+                                <p class="step-path">Einstellungen &rarr; Kalender</p>
+                            </div>
+                            <div class="step-card-body">
+                                <ul class="config-list">
+                                    <li>Verbinde deinen persönlichen Kalender (Google, Outlook, etc.)</li>
+                                    <li>Dadurch werden gebuchte Termine automatisch synchronisiert</li>
+                                    <li>Bestehende Termine werden als "belegt" angezeigt</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Konferenzen -->
+                        <div class="step-card" data-step="5">
+                            <div class="step-card-header">
+                                <h3>Konferenzen einrichten</h3>
+                                <p class="step-path">Einstellungen &rarr; Konferenzen</p>
+                            </div>
+                            <div class="step-card-body">
+                                <ul class="config-list">
+                                    <li>Verbinde deine eigene Konferenzlösung (Zoom, Teams, etc.)</li>
+                                    <li>Der Konferenzlink wird automatisch in Einladungen eingefügt</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 6: Erscheinungsbild -->
+                        <div class="step-card" data-step="6">
+                            <div class="step-card-header">
+                                <h3>Erscheinungsbild anpassen</h3>
+                                <p class="step-path">Einstellungen &rarr; Erscheinungsbild</p>
+                            </div>
+                            <div class="step-card-body">
+                                <ul class="config-list">
+                                    <li><strong>Design:</strong> Hell (Light Mode) als feste Einstellung</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Kalender -->
-                    <div class="config-section">
-                        <h3>3. Kalender</h3>
-                        <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 1rem;">
-                            Einstellungen &rarr; Kalender
-                        </p>
-                        <ul class="config-list">
-                            <li>Verbinde deinen persönlichen Kalender (Google, Outlook, etc.)</li>
-                            <li>Dadurch werden gebuchte Termine automatisch synchronisiert</li>
-                            <li>Bestehende Termine werden als "belegt" angezeigt</li>
-                        </ul>
+                    <!-- Navigation Buttons -->
+                    <div class="stepper-nav">
+                        <button class="stepper-btn stepper-prev" disabled>&larr; Zurück</button>
+                        <span class="stepper-counter">Schritt <span id="current-step">1</span> von 6</span>
+                        <button class="stepper-btn stepper-next">Weiter &rarr;</button>
                     </div>
-
-                    <!-- Konferenzen -->
-                    <div class="config-section">
-                        <h3>4. Konferenzen</h3>
-                        <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 1rem;">
-                            Einstellungen &rarr; Konferenzen
-                        </p>
-                        <ul class="config-list">
-                            <li>Verbinde deine eigene Konferenzlösung (Zoom, Teams, etc.)</li>
-                            <li>Der Konferenzlink wird automatisch in Einladungen eingefügt</li>
-                        </ul>
-                    </div>
-
-                    <!-- Erscheinungsbild -->
-                    <div class="config-section">
-                        <h3>5. Erscheinungsbild</h3>
-                        <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 1rem;">
-                            Einstellungen &rarr; Erscheinungsbild
-                        </p>
-                        <ul class="config-list">
-                            <li><strong>Design:</strong> Hell (Light Mode) als feste Einstellung</li>
-                        </ul>
-                    </div>
-
                 </div>
+
             </div>
         </section>
+
+        <style>
+            .setup-stepper {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .stepper-progress {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 2rem;
+                flex-wrap: wrap;
+                gap: 0.25rem;
+            }
+
+            .stepper-step {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .step-circle {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #e0e0e0;
+                color: var(--color-neutral-gray);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: var(--font-weight-bold);
+                font-size: var(--font-size-base);
+                transition: all 0.3s ease;
+            }
+
+            .stepper-step.active .step-circle,
+            .stepper-step.completed .step-circle {
+                background: var(--color-brand-primary);
+                color: var(--color-brand-secondary);
+            }
+
+            .stepper-step.completed .step-circle {
+                background: var(--color-brand-secondary);
+                color: white;
+            }
+
+            .step-label {
+                margin-top: 0.5rem;
+                font-size: var(--font-size-xs);
+                color: var(--color-neutral-gray);
+                text-align: center;
+                max-width: 80px;
+            }
+
+            .stepper-step.active .step-label {
+                color: var(--color-brand-secondary);
+                font-weight: var(--font-weight-bold);
+            }
+
+            .stepper-line {
+                flex: 1;
+                height: 3px;
+                background: #e0e0e0;
+                min-width: 30px;
+                max-width: 60px;
+                margin: 0 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .stepper-content {
+                position: relative;
+                min-height: 200px;
+            }
+
+            .step-card {
+                display: none;
+                background: white;
+                border: 2px solid var(--color-brand-secondary);
+                border-radius: 12px;
+                overflow: hidden;
+                animation: fadeIn 0.3s ease;
+            }
+
+            .step-card.active {
+                display: block;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .step-card-header {
+                background: var(--color-brand-secondary);
+                color: white;
+                padding: 1.25rem 1.5rem;
+            }
+
+            .step-card-header h3 {
+                margin: 0;
+                font-size: var(--font-size-lg);
+            }
+
+            .step-path {
+                margin: 0.5rem 0 0 0;
+                font-size: var(--font-size-sm);
+                opacity: 0.8;
+            }
+
+            .step-card-body {
+                padding: 1.5rem;
+            }
+
+            .step-card-body .config-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .step-card-body .config-list li {
+                padding: 0.75rem 0;
+                padding-left: 1.5rem;
+                position: relative;
+                border-bottom: 1px solid #eee;
+            }
+
+            .step-card-body .config-list li:last-child {
+                border-bottom: none;
+            }
+
+            .step-card-body .config-list li::before {
+                content: "✓";
+                position: absolute;
+                left: 0;
+                color: var(--color-brand-primary);
+                font-weight: bold;
+            }
+
+            .stepper-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 1.5rem;
+                padding-top: 1rem;
+            }
+
+            .stepper-btn {
+                background: var(--color-brand-secondary);
+                color: white;
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: var(--font-size-sm);
+                font-weight: var(--font-weight-bold);
+                transition: all 0.3s ease;
+            }
+
+            .stepper-btn:hover:not(:disabled) {
+                background: var(--color-brand-primary);
+                color: var(--color-brand-secondary);
+            }
+
+            .stepper-btn:disabled {
+                background: #e0e0e0;
+                color: #999;
+                cursor: not-allowed;
+            }
+
+            .stepper-counter {
+                font-size: var(--font-size-sm);
+                color: var(--color-neutral-gray);
+            }
+
+            @media (max-width: 600px) {
+                .stepper-progress {
+                    gap: 0.125rem;
+                }
+                .step-circle {
+                    width: 32px;
+                    height: 32px;
+                    font-size: var(--font-size-sm);
+                }
+                .step-label {
+                    font-size: 10px;
+                    max-width: 50px;
+                }
+                .stepper-line {
+                    min-width: 15px;
+                    max-width: 30px;
+                }
+            }
+        </style>
+
+        <script>
+            (function() {
+                const steps = document.querySelectorAll('.stepper-step');
+                const cards = document.querySelectorAll('.step-card');
+                const prevBtn = document.querySelector('.stepper-prev');
+                const nextBtn = document.querySelector('.stepper-next');
+                const counter = document.getElementById('current-step');
+                let currentStep = 1;
+                const totalSteps = 6;
+
+                function updateStepper() {
+                    // Update step indicators
+                    steps.forEach((step, index) => {
+                        const stepNum = index + 1;
+                        step.classList.remove('active', 'completed');
+                        if (stepNum === currentStep) {
+                            step.classList.add('active');
+                        } else if (stepNum < currentStep) {
+                            step.classList.add('completed');
+                        }
+                    });
+
+                    // Update cards
+                    cards.forEach(card => {
+                        card.classList.remove('active');
+                        if (parseInt(card.dataset.step) === currentStep) {
+                            card.classList.add('active');
+                        }
+                    });
+
+                    // Update buttons
+                    prevBtn.disabled = currentStep === 1;
+                    nextBtn.textContent = currentStep === totalSteps ? 'Fertig ✓' : 'Weiter →';
+
+                    // Update counter
+                    counter.textContent = currentStep;
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    if (currentStep > 1) {
+                        currentStep--;
+                        updateStepper();
+                    }
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    if (currentStep < totalSteps) {
+                        currentStep++;
+                        updateStepper();
+                    }
+                });
+
+                // Click on step indicator to jump
+                steps.forEach((step, index) => {
+                    step.addEventListener('click', () => {
+                        currentStep = index + 1;
+                        updateStepper();
+                    });
+                });
+            })();
+        </script>
 
         <section class="section-narrow">
             <div class="container">
                 <h2 class="text-center" style="margin-bottom: 1rem;">Meeting-Typen</h2>
+                <p class="text-center" style="color: var(--color-neutral-gray); margin-bottom: 2rem;">
+                    Übersicht und Kopiervorlagen für die Konfiguration in Cal.com
+                </p>
 
                 <div class="meeting-grid">
 
@@ -295,6 +624,9 @@
                         <div class="meeting-meta">
                             <span class="meeting-badge">30 Min</span>
                             <span class="meeting-badge buffer">+15 Min Puffer</span>
+                        </div>
+                        <div style="margin: 0.75rem 0;">
+                            <a href="https://buchung.vitale-arbeitskultur.de/kennenlernen" target="_blank" style="font-size: var(--font-size-sm); color: var(--color-brand-secondary);">buchung.vitale-arbeitskultur.de/kennenlernen</a>
                         </div>
                         <div class="meeting-purpose">
                             <strong>Zweck:</strong>
@@ -308,8 +640,11 @@
                         <div class="meeting-target">
                             <strong>Zielgruppe:</strong> Neue Interessent:innen, potenzielle Kund:innen
                         </div>
-                        <div class="meeting-description">
-                            "In diesem unverbindlichen Gespräch lernen wir uns kennen und sprechen über eure aktuellen Herausforderungen. Gemeinsam schauen wir, wie wir euch auf eurem Weg unterstützen können."
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Cal.com Titel:</strong></p>
+                            <code style="display: block; background: #f9f9f9; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); margin-bottom: 0.75rem;">Kennenlerngespräch (30 Min)</code>
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Cal.com Beschreibung:</strong></p>
+                            <code style="display: block; background: #f9f9f9; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); white-space: normal;">In diesem unverbindlichen Gespräch lernen wir uns kennen und sprechen über eure aktuellen Herausforderungen. Gemeinsam schauen wir, wie wir euch auf eurem Weg unterstützen können.</code>
                         </div>
                     </div>
 
@@ -317,8 +652,11 @@
                     <div class="meeting-card">
                         <h3>Coaching-Session</h3>
                         <div class="meeting-meta">
-                            <span class="meeting-badge">60 Min</span>
-                            <span class="meeting-badge buffer">+15 Min Puffer</span>
+                            <span class="meeting-badge">60 oder 90 Min</span>
+                            <span class="meeting-badge buffer">+15-30 Min Puffer</span>
+                        </div>
+                        <div style="margin: 0.75rem 0;">
+                            <a href="https://buchung.vitale-arbeitskultur.de/coaching" target="_blank" style="font-size: var(--font-size-sm); color: var(--color-brand-secondary);">buchung.vitale-arbeitskultur.de/coaching</a>
                         </div>
                         <div class="meeting-purpose">
                             <strong>Zweck:</strong>
@@ -326,38 +664,23 @@
                                 <li>Individuelle Coaching-Termine</li>
                                 <li>Persönliche Entwicklung</li>
                                 <li>Reflexion und Begleitung</li>
-                                <li>Regelmäßige Sessions</li>
+                                <li>Regelmäßige oder intensive Sessions</li>
                             </ul>
                         </div>
                         <div class="meeting-target">
                             <strong>Zielgruppe:</strong> Bestehende Coaching-Klient:innen, Führungskräfte
                         </div>
-                        <div class="meeting-description">
-                            "Persönliche Coaching-Session für deine individuelle Entwicklung. In einem geschützten Raum reflektieren wir gemeinsam und arbeiten an deinen Themen."
-                        </div>
-                    </div>
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.5rem;"><strong>Variante 1: Standard (60 Min, +15 Min Puffer)</strong></p>
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;">Cal.com Titel:</p>
+                            <code style="display: block; background: #f9f9f9; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); margin-bottom: 0.75rem;">Coaching-Session (60 Min)</code>
 
-                    <!-- Coaching-Session intensiv -->
-                    <div class="meeting-card">
-                        <h3>Coaching-Session intensiv</h3>
-                        <div class="meeting-meta">
-                            <span class="meeting-badge">90 Min</span>
-                            <span class="meeting-badge buffer">+30 Min Puffer</span>
-                        </div>
-                        <div class="meeting-purpose">
-                            <strong>Zweck:</strong>
-                            <ul>
-                                <li>Vertieftes Coaching</li>
-                                <li>Komplexe Themen</li>
-                                <li>Intensive Reflexionsarbeit</li>
-                                <li>Strategische Fragestellungen</li>
-                            </ul>
-                        </div>
-                        <div class="meeting-target">
-                            <strong>Zielgruppe:</strong> Bestehende Coaching-Klient:innen mit vertieftem Bedarf
-                        </div>
-                        <div class="meeting-description">
-                            "Intensive Coaching-Session für komplexere Themen und vertiefende Arbeit. Hier nehmen wir uns die Zeit, die wir für deine Entwicklung brauchen."
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.5rem; margin-top: 1rem;"><strong>Variante 2: Intensiv (90 Min, +30 Min Puffer)</strong></p>
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;">Cal.com Titel:</p>
+                            <code style="display: block; background: #f9f9f9; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); margin-bottom: 0.75rem;">Coaching-Session intensiv (90 Min)</code>
+
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem; margin-top: 1rem;">Cal.com Beschreibung (für beide):</p>
+                            <code style="display: block; background: #f9f9f9; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); white-space: normal;">Persönliche Coaching-Session für deine individuelle Entwicklung. In einem geschützten Raum reflektieren wir gemeinsam und arbeiten an deinen Themen.</code>
                         </div>
                     </div>
 
@@ -367,6 +690,9 @@
                         <div class="meeting-meta">
                             <span class="meeting-badge">45 Min</span>
                             <span class="meeting-badge buffer">+15 Min Puffer</span>
+                        </div>
+                        <div style="margin: 0.75rem 0;">
+                            <a href="https://buchung.vitale-arbeitskultur.de/auftragsklaerung" target="_blank" style="font-size: var(--font-size-sm); color: var(--color-brand-secondary);">buchung.vitale-arbeitskultur.de/auftragsklaerung</a>
                         </div>
                         <div class="meeting-purpose">
                             <strong>Zweck:</strong>
@@ -380,8 +706,11 @@
                         <div class="meeting-target">
                             <strong>Zielgruppe:</strong> Interessent:innen vor Projektstart, Bestandskund:innen für neue Projekte
                         </div>
-                        <div class="meeting-description">
-                            "Gemeinsam klären wir die Details eures Anliegens: Ziele, Rahmenbedingungen und nächste Schritte für eine erfolgreiche Zusammenarbeit."
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Cal.com Titel:</strong></p>
+                            <code style="display: block; background: #f9f9f9; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); margin-bottom: 0.75rem;">Auftragsklärung (45 Min)</code>
+                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Cal.com Beschreibung:</strong></p>
+                            <code style="display: block; background: #f9f9f9; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); white-space: normal;">Gemeinsam klären wir die Details eures Anliegens: Ziele, Rahmenbedingungen und nächste Schritte für eine erfolgreiche Zusammenarbeit.</code>
                         </div>
                     </div>
 
@@ -482,78 +811,6 @@
             </div>
         </section>
 
-        <section class="section-narrow">
-            <div class="container">
-                <h2 class="text-center" style="margin-bottom: 1rem;">Cal.com Vorlagen</h2>
-                <p class="text-center" style="color: var(--color-neutral-gray); margin-bottom: 2rem;">
-                    Kopiervorlagen für die Konfiguration in Cal.com
-                </p>
-
-                <div class="meeting-grid">
-
-                    <!-- Template: Kennenlerngespräch -->
-                    <div class="meeting-card" style="background: #f9f9f9;">
-                        <h3>Kennenlerngespräch</h3>
-                        <div class="meeting-meta">
-                            <span class="meeting-badge">30 Min</span>
-                            <span class="meeting-badge buffer">+15 Min Puffer</span>
-                        </div>
-                        <div style="margin-top: 1rem;">
-                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Titel:</strong></p>
-                            <code style="display: block; background: white; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); margin-bottom: 1rem;">Kennenlerngespräch (30 Min)</code>
-                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Beschreibung:</strong></p>
-                            <code style="display: block; background: white; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); white-space: normal;">In diesem unverbindlichen Gespräch lernen wir uns kennen und sprechen über eure aktuellen Herausforderungen. Gemeinsam schauen wir, wie wir euch auf eurem Weg unterstützen können.</code>
-                        </div>
-                    </div>
-
-                    <!-- Template: Coaching-Session -->
-                    <div class="meeting-card" style="background: #f9f9f9;">
-                        <h3>Coaching-Session</h3>
-                        <div class="meeting-meta">
-                            <span class="meeting-badge">60 Min</span>
-                            <span class="meeting-badge buffer">+15 Min Puffer</span>
-                        </div>
-                        <div style="margin-top: 1rem;">
-                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Titel:</strong></p>
-                            <code style="display: block; background: white; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); margin-bottom: 1rem;">Coaching-Session (60 Min)</code>
-                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Beschreibung:</strong></p>
-                            <code style="display: block; background: white; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); white-space: normal;">Persönliche Coaching-Session für deine individuelle Entwicklung. In einem geschützten Raum reflektieren wir gemeinsam und arbeiten an deinen Themen.</code>
-                        </div>
-                    </div>
-
-                    <!-- Template: Coaching-Session intensiv -->
-                    <div class="meeting-card" style="background: #f9f9f9;">
-                        <h3>Coaching-Session intensiv</h3>
-                        <div class="meeting-meta">
-                            <span class="meeting-badge">90 Min</span>
-                            <span class="meeting-badge buffer">+30 Min Puffer</span>
-                        </div>
-                        <div style="margin-top: 1rem;">
-                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Titel:</strong></p>
-                            <code style="display: block; background: white; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); margin-bottom: 1rem;">Coaching-Session intensiv (90 Min)</code>
-                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Beschreibung:</strong></p>
-                            <code style="display: block; background: white; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); white-space: normal;">Intensive Coaching-Session für komplexere Themen und vertiefende Arbeit. Hier nehmen wir uns die Zeit, die wir für deine Entwicklung brauchen.</code>
-                        </div>
-                    </div>
-
-                    <!-- Template: Auftragsklärung -->
-                    <div class="meeting-card" style="background: #f9f9f9;">
-                        <h3>Auftragsklärung</h3>
-                        <div class="meeting-meta">
-                            <span class="meeting-badge">45 Min</span>
-                            <span class="meeting-badge buffer">+15 Min Puffer</span>
-                        </div>
-                        <div style="margin-top: 1rem;">
-                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Titel:</strong></p>
-                            <code style="display: block; background: white; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); margin-bottom: 1rem;">Auftragsklärung (45 Min)</code>
-                            <p style="font-size: var(--font-size-sm); color: var(--color-neutral-gray); margin-bottom: 0.25rem;"><strong>Beschreibung:</strong></p>
-                            <code style="display: block; background: white; padding: 0.5rem; border-radius: 4px; font-size: var(--font-size-sm); white-space: normal;">Gemeinsam klären wir die Details eures Anliegens: Ziele, Rahmenbedingungen und nächste Schritte für eine erfolgreiche Zusammenarbeit.</code>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
