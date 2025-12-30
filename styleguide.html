@@ -479,6 +479,187 @@
                 </div>
             </div>
         </section>
+
+        <!-- Brand Assets -->
+        <section class="section-narrow">
+            <div class="container">
+                <div class="card">
+                    <h2>Brand Assets</h2>
+                    <p>Logos und Icons für die Verwendung in Anwendungen und Dokumenten. Klicke auf "URL kopieren" um die URL in die Zwischenablage zu kopieren.</p>
+
+                    <style>
+                        .asset-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                            gap: 1.5rem;
+                            margin-top: 2rem;
+                        }
+                        .asset-card {
+                            border: 1px solid #e0e0e0;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            background: white;
+                        }
+                        .asset-preview {
+                            height: 160px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 1rem;
+                        }
+                        .asset-preview.dark {
+                            background: var(--color-brand-secondary);
+                        }
+                        .asset-preview.light {
+                            background: #f5f5f5;
+                        }
+                        .asset-preview img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: contain;
+                        }
+                        .asset-info {
+                            padding: 1rem;
+                            border-top: 1px solid #e0e0e0;
+                        }
+                        .asset-info h4 {
+                            margin: 0 0 0.5rem 0;
+                            font-size: var(--font-size-base);
+                        }
+                        .asset-info p {
+                            margin: 0 0 1rem 0;
+                            font-size: var(--font-size-sm);
+                            color: var(--color-neutral-gray);
+                        }
+                        .asset-buttons {
+                            display: flex;
+                            gap: 0.5rem;
+                        }
+                        .asset-btn {
+                            flex: 1;
+                            padding: 0.5rem 1rem;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            font-size: var(--font-size-sm);
+                            font-weight: var(--font-weight-bold);
+                            text-decoration: none;
+                            text-align: center;
+                            transition: opacity 0.2s;
+                        }
+                        .asset-btn:hover {
+                            opacity: 0.8;
+                        }
+                        .asset-btn.download {
+                            background: var(--color-brand-secondary);
+                            color: white;
+                        }
+                        .asset-btn.copy {
+                            background: var(--color-brand-primary);
+                            color: var(--color-brand-secondary);
+                        }
+                        .asset-btn.copied {
+                            background: #28a745;
+                            color: white;
+                        }
+                    </style>
+
+                    <div class="asset-grid">
+                        <!-- Logo White -->
+                        <div class="asset-card">
+                            <div class="asset-preview dark">
+                                <img src="assets/VA-Logo-White.png" alt="VA Logo White">
+                            </div>
+                            <div class="asset-info">
+                                <h4>Logo (Weiß)</h4>
+                                <p>500 × 643 px · PNG · Für dunkle Hintergründe</p>
+                                <div class="asset-buttons">
+                                    <a href="assets/VA-Logo-White.png" download class="asset-btn download">Download</a>
+                                    <button class="asset-btn copy" onclick="copyUrl('https://docs.vitale-arbeitskultur.de/assets/VA-Logo-White.png', this)">URL kopieren</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Logo Header -->
+                        <div class="asset-card">
+                            <div class="asset-preview light">
+                                <img src="assets/VA-Logo_Header.png" alt="VA Logo Header">
+                            </div>
+                            <div class="asset-info">
+                                <h4>Logo (Header)</h4>
+                                <p>754 × 200 px · PNG · Horizontal für Header</p>
+                                <div class="asset-buttons">
+                                    <a href="assets/VA-Logo_Header.png" download class="asset-btn download">Download</a>
+                                    <button class="asset-btn copy" onclick="copyUrl('https://docs.vitale-arbeitskultur.de/assets/VA-Logo_Header.png', this)">URL kopieren</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Icon Yellow -->
+                        <div class="asset-card">
+                            <div class="asset-preview light">
+                                <img src="assets/icon-yellow.png" alt="VA Icon Yellow" style="max-height: 120px;">
+                            </div>
+                            <div class="asset-info">
+                                <h4>Icon (Gelb)</h4>
+                                <p>512 × 512 px · PNG · Quadratisch für Apps</p>
+                                <div class="asset-buttons">
+                                    <a href="assets/icon-yellow.png" download class="asset-btn download">Download</a>
+                                    <button class="asset-btn copy" onclick="copyUrl('https://docs.vitale-arbeitskultur.de/assets/icon-yellow.png', this)">URL kopieren</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favicon 64 -->
+                        <div class="asset-card">
+                            <div class="asset-preview light">
+                                <img src="assets/favicon-64.png" alt="Favicon 64" style="image-rendering: pixelated;">
+                            </div>
+                            <div class="asset-info">
+                                <h4>Favicon (64px)</h4>
+                                <p>64 × 64 px · PNG · Browser Favicon</p>
+                                <div class="asset-buttons">
+                                    <a href="assets/favicon-64.png" download class="asset-btn download">Download</a>
+                                    <button class="asset-btn copy" onclick="copyUrl('https://docs.vitale-arbeitskultur.de/assets/favicon-64.png', this)">URL kopieren</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favicon 32 -->
+                        <div class="asset-card">
+                            <div class="asset-preview light">
+                                <img src="assets/favicon-32.png" alt="Favicon 32" style="image-rendering: pixelated;">
+                            </div>
+                            <div class="asset-info">
+                                <h4>Favicon (32px)</h4>
+                                <p>32 × 32 px · PNG · Klein für Tabs</p>
+                                <div class="asset-buttons">
+                                    <a href="assets/favicon-32.png" download class="asset-btn download">Download</a>
+                                    <button class="asset-btn copy" onclick="copyUrl('https://docs.vitale-arbeitskultur.de/assets/favicon-32.png', this)">URL kopieren</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        function copyUrl(url, button) {
+                            navigator.clipboard.writeText(url).then(() => {
+                                const originalText = button.textContent;
+                                button.textContent = 'Kopiert!';
+                                button.classList.add('copied');
+                                setTimeout(() => {
+                                    button.textContent = originalText;
+                                    button.classList.remove('copied');
+                                }, 2000);
+                            }).catch(err => {
+                                console.error('Fehler beim Kopieren:', err);
+                                alert('URL: ' + url);
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
