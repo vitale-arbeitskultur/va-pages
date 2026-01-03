@@ -336,3 +336,20 @@ Purpose: TBD
 **Total Fields Across Core Tables**: ~70 columns
 **Estimated Migration Time**: 6-8 hours for core tables
 **Data Volume**: ~1,400 rows across all tables
+
+---
+
+## Schema Alignment: Matrix Room Structure
+
+The **Kreise** table structure is mirrored in Matrix/Element room organization:
+
+| Coda Kreis | Matrix Room |
+|------------|-------------|
+| Organisationsentwicklung | #kreis-od |
+| Administration | #kreis-admin |
+| Coaching | #kreis-coaching |
+| Digitalisierung | #kreis-digi |
+
+When Kreise are updated in the SSOT, the corresponding Matrix space structure should also be updated.
+
+See: `architecture/02-application-layer/collaboration-capabilities/communication.md`

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <metadata>
+        <name>vitale-arbeitskultur</name>
+        <title>Vitale Arbeitskultur</title>
+        <creationDate>2025-01-01</creationDate>
+        <author>Vitale Arbeitskultur</author>
+        <authorEmail>kontakt@vitale-arbeitskultur.de</authorEmail>
+        <authorUrl>https://vitale-arbeitskultur.de</authorUrl>
+        <copyright>Copyright (C) 2025 Vitale Arbeitskultur. All rights reserved.</copyright>
+        <license>GNU General Public License version 2 or later</license>
+        <version>1.0.0</version>
+        <apiVersion>3</apiVersion>
+        <description>Vitale Arbeitskultur branded survey theme based on the VA Design System</description>
+        <extends>fruity</extends>
+    </metadata>
+
+    <files>
+        <css>
+            <add>css/va-tokens.css</add>
+            <add>css/custom.css</add>
+        </css>
+        <js>
+            <!-- Add custom JavaScript if needed -->
+        </js>
+    </files>
+
+    <options>
+        <options_page>
+            <attributes>
+                <optionAttributes>
+                    <!-- Brand Colors -->
+                    <brandcolor>#efb708</brandcolor>
+                    <container>container</container>
+                    <font>custom</font>
+                    <bodybackgroundcolor>#ffffff</bodybackgroundcolor>
+                    <questionbackgroundcolor>#ffffff</questionbackgroundcolor>
+                    <questionborder>on</questionborder>
+                    <questioncontainershadow>on</questioncontainershadow>
+                    <animatebody>on</animatebody>
+                    <showpopups>1</showpopups>
+                    <showclearall>off</showclearall>
+                    <hideprivacyinfo>on</hideprivacyinfo>
+                    <showlogo>on</showlogo>
+                    <fixnumauto>off</fixnumauto>
+                    <checkalialialialibox>fa-check-square-o</checkalialialialibox>
+                    <backgroundimagefile>./files/pattern.png</backgroundimagefile>
+                    <backgroundimagefit>auto</backgroundimagefit>
+                    <logofile>./files/VA-Logo-White.png</logofile>
+                    <headerbackground>#21474d</headerbackground>
+                    <progressbar>on</progressbar>
+                    <showbrand>off</showbrand>
+                </optionAttributes>
+            </attributes>
+        </options_page>
+    </options>
+</config>

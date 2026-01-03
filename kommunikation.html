@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kommunikation bei Vitale Arbeitskultur - Matrix/Element Chat und Video">
+    <meta name="author" content="Vitale Arbeitskultur">
+    <title>Kommunikation | Vitale Arbeitskultur</title>
+
+    <!-- Design Tokens -->
+    <link rel="stylesheet" href="css/va-tokens.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/va-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/VA-Logo-White.png" alt="Vitale Arbeitskultur" style="height: 140px; width: auto;">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="systemarchitektur.html">Systemarchitektur</a></li>
+                    <li><a href="va-os.html">VA-OS</a></li>
+                    <li><a href="kommunikation.html" class="active">Kommunikation</a></li>
+                    <li><a href="buchung.html">Buchung</a></li>
+                    <li><a href="styleguide.html">Styleguide</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">Interne <span class="text-primary">Kommunikation</span></h1>
+                <p class="text-center" style="font-size: var(--font-size-base); margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: var(--color-neutral-gray);">
+                    Wir nutzen Matrix/Element als sichere, selbst-gehostete Kommunikationsplattform
+                    für Chat und Videoanrufe zwischen allen Komplizen.
+                </p>
+            </div>
+        </section>
+
+        <!-- Raumstruktur Section -->
+        <section class="section-narrow">
+            <div class="container">
+                <h2>Unsere Raumstruktur</h2>
+                <p style="margin-bottom: 2rem;">
+                    Die Struktur unserer Matrix-Räume spiegelt unsere soziokratische Organisation wider.
+                    So findest du dich schnell zurecht:
+                </p>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--color-brand-primary);">Haupträume</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">#alle-komplizen</td>
+                            <td style="padding: 0.75rem 0;">Hauptkanal für den täglichen Austausch</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">#ankündigungen</td>
+                            <td style="padding: 0.75rem 0;">Wichtige Mitteilungen (nur Admins können posten)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">#random</td>
+                            <td style="padding: 0.75rem 0;">Off-topic, Socializing, Lustiges</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--color-brand-secondary);">Kreise (Space)</h3>
+                    <p style="margin-bottom: 1rem;">Jeder Kreis hat seinen eigenen Raum für die Governance-Arbeit:</p>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">#kreis-od</td>
+                            <td style="padding: 0.75rem 0;">Organisationsentwicklung</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">#kreis-admin</td>
+                            <td style="padding: 0.75rem 0;">Administration</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">#kreis-coaching</td>
+                            <td style="padding: 0.75rem 0;">Coaching</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">#kreis-digi</td>
+                            <td style="padding: 0.75rem 0;">Digitalisierung</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">#spannungen</td>
+                            <td style="padding: 0.75rem 0;">Spannungsverarbeitung (kreisübergreifend)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--color-brand-accent);">Projekte (Space)</h3>
+                    <p>
+                        Für aktive Aufträge werden Projekträume erstellt: <strong>#projekt-[name]</strong><br>
+                        Du wirst zu den Projekträumen eingeladen, an denen du mitarbeitest.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Element einrichten Section -->
+        <section class="section-narrow" style="background: #f8f8f8;">
+            <div class="container">
+                <h2>Element einrichten</h2>
+                <p style="margin-bottom: 2rem;">
+                    Element ist der Client für Matrix. Du kannst Element auf allen Geräten nutzen.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div class="card">
+                        <h3>Desktop (empfohlen)</h3>
+                        <ol style="padding-left: 1.5rem; margin-top: 1rem;">
+                            <li style="margin-bottom: 0.5rem;">Lade Element herunter: <a href="https://element.io/download" target="_blank">element.io/download</a></li>
+                            <li style="margin-bottom: 0.5rem;">Öffne Element und wähle "Anmelden"</li>
+                            <li style="margin-bottom: 0.5rem;">Gib die Homeserver-URL ein (vom Admin)</li>
+                            <li style="margin-bottom: 0.5rem;">Melde dich mit deinen Zugangsdaten an</li>
+                        </ol>
+                    </div>
+
+                    <div class="card">
+                        <h3>Mobil</h3>
+                        <ol style="padding-left: 1.5rem; margin-top: 1rem;">
+                            <li style="margin-bottom: 0.5rem;">Lade "Element" aus dem App Store / Play Store</li>
+                            <li style="margin-bottom: 0.5rem;">Tippe auf "Anmelden"</li>
+                            <li style="margin-bottom: 0.5rem;">Wähle "Anderer Homeserver" und gib die URL ein</li>
+                            <li style="margin-bottom: 0.5rem;">Melde dich mit deinen Zugangsdaten an</li>
+                        </ol>
+                    </div>
+
+                    <div class="card">
+                        <h3>Web</h3>
+                        <p style="margin-top: 1rem;">
+                            Du kannst Element auch direkt im Browser nutzen.
+                            Öffne einfach die Homeserver-URL in deinem Browser.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videoanrufe Section -->
+        <section class="section-narrow">
+            <div class="container">
+                <h2>Videoanrufe</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    Element Call ist direkt in Matrix integriert. Du brauchst keine zusätzliche Software.
+                </p>
+                <div class="card">
+                    <h3>So startest du einen Anruf:</h3>
+                    <ol style="padding-left: 1.5rem; margin-top: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Öffne einen beliebigen Raum</li>
+                        <li style="margin-bottom: 0.5rem;">Klicke oben rechts auf das Video-Symbol</li>
+                        <li style="margin-bottom: 0.5rem;">Andere Teilnehmer können dem Anruf beitreten</li>
+                    </ol>
+                    <p style="margin-top: 1rem; color: var(--color-neutral-gray);">
+                        Funktioniert im Browser, Desktop und mobil.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tipps Section -->
+        <section class="section-narrow" style="background: #f8f8f8;">
+            <div class="container">
+                <h2>Tipps für die Nutzung</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div class="card">
+                        <h3>Benachrichtigungen</h3>
+                        <p>Stelle Benachrichtigungen so ein, dass du wichtige Nachrichten mitbekommst, aber nicht ständig abgelenkt wirst. In den Raumeinstellungen kannst du die Benachrichtigungsstufe anpassen.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Schlüsselsicherung</h3>
+                        <p>Aktiviere die Schlüsselsicherung, damit du deine verschlüsselten Nachrichten auf allen Geräten lesen kannst. Element führt dich beim ersten Start durch die Einrichtung.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Threads</h3>
+                        <p>Nutze Threads für längere Diskussionen zu einem Thema. So bleibt der Hauptkanal übersichtlich. Klicke auf eine Nachricht und wähle "In Thread antworten".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vitale Arbeitskultur. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+</html>
