@@ -238,7 +238,7 @@ Das Layout wird **nicht** in Coda definiert, sondern automatisch vom Frontend be
 ## 📞 Kontakt & Support
 
 Bei Fragen oder Problemen:
-- **E-Mail:** info@vitalearbeits-kultur.de
+- **E-Mail:** kontakt@vitale-arbeitskultur.de
 - **GitHub Issues:** https://github.com/vitale-arbeitskultur/va-os/issues
 
 ---

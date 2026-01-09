@@ -236,8 +236,8 @@ npm run build:tokens
 - [Soziokratie Prinzipien](https://www.sociocracyforall.org/)
 - [GitHub Pages Dokumentation](https://docs.github.com/en/pages)
 - [Style Dictionary](https://amzn.github.io/style-dictionary/)
-- [VA Hauptwebseite](https://vitalearbeits-kultur.de)
+- [VA Hauptwebseite](https://vitale-arbeitskultur.de)
 
 ---
 
-**Bei Fragen:** [info@vitalearbeits-kultur.de](mailto:info@vitalearbeits-kultur.de)
+**Bei Fragen:** [kontakt@vitale-arbeitskultur.de](mailto:kontakt@vitale-arbeitskultur.de)

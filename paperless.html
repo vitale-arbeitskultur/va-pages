@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paperless Dokumentenmanagement - Belege und Rechnungen digital verwalten">
+    <meta name="author" content="Vitale Arbeitskultur">
+    <title>Paperless | Vitale Arbeitskultur</title>
+
+    <!-- Design Tokens -->
+    <link rel="stylesheet" href="css/va-tokens.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/va-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/VA-Logo-White.png" alt="Vitale Arbeitskultur" style="height: 140px; width: auto;">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="systemarchitektur.html">Systemarchitektur</a></li>
+                    <li><a href="va-os.html">VA-OS</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">Systeme</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kommunikation.html">Kommunikation</a></li>
+                            <li><a href="buchung.html">Buchung</a></li>
+                            <li><a href="paperless.html" class="active">Paperless</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="styleguide.html">Styleguide</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">Paperless <span class="text-primary">Dokumentenmanagement</span></h1>
+                <p class="text-center" style="font-size: var(--font-size-base); margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: var(--color-neutral-gray);">
+                    Unser digitales Archiv für Belege, Rechnungen und Verträge.
+                    Automatische Texterkennung macht alle Dokumente durchsuchbar.
+                </p>
+            </div>
+        </section>
+
+        <!-- Email Import Section -->
+        <section class="section-narrow" style="background: linear-gradient(135deg, var(--color-brand-primary) 0%, #FFD54F 100%);">
+            <div class="container">
+                <div style="text-align: center; padding: 2rem 0;">
+                    <h2 style="color: var(--color-brand-secondary); margin-bottom: 1rem;">Dokumente per E-Mail einreichen</h2>
+                    <p style="font-size: var(--font-size-lg); color: var(--color-brand-secondary); margin-bottom: 2rem;">
+                        Leite Rechnungen und Belege einfach weiter an:
+                    </p>
+                    <div style="background: white; display: inline-block; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <a href="mailto:belege@va-os.io" style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-brand-secondary);">
+                            belege@va-os.io
+                        </a>
+                    </div>
+                    <p style="margin-top: 1.5rem; color: var(--color-brand-secondary);">
+                        Dokumente werden automatisch verarbeitet und sind dann im Paperless-Archiv auffindbar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Funktionen Section -->
+        <section class="section-narrow">
+            <div class="container">
+                <h2>Was Paperless kann</h2>
+                <p style="margin-bottom: 2rem;">
+                    Paperless-ngx ist ein Open-Source Dokumentenmanagementsystem mit automatischer Texterkennung (OCR).
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div class="card">
+                        <h3 style="color: var(--color-brand-primary);">Automatische Texterkennung</h3>
+                        <p>
+                            Alle eingescannten Dokumente werden per OCR verarbeitet.
+                            Auch handschriftliche Texte werden erkannt und durchsuchbar gemacht.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--color-brand-secondary);">Volltextsuche</h3>
+                        <p>
+                            Finde Dokumente anhand ihres Inhalts. Suche nach Rechnungsnummern,
+                            Beträgen, Firmennamen oder beliebigen anderen Texten.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--color-brand-accent);">Automatische Kategorisierung</h3>
+                        <p>
+                            Paperless erkennt automatisch Absender, Dokumenttyp und Datum.
+                            Dokumente werden intelligent getaggt und sortiert.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anwendungsfälle Section -->
+        <section class="section-narrow" style="background: #f8f8f8;">
+            <div class="container">
+                <h2>Typische Anwendungsfälle</h2>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--color-brand-primary);">Eingangsrechnungen</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold); width: 30%;">Was tun?</td>
+                            <td style="padding: 0.75rem 0;">Rechnung per E-Mail weiterleiten an belege@va-os.io</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">Vorteil</td>
+                            <td style="padding: 0.75rem 0;">Alle Rechnungen an einem Ort, durchsuchbar nach Lieferant oder Betrag</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">Bei Steuererklärung</td>
+                            <td style="padding: 0.75rem 0;">Schnell alle relevanten Belege finden und exportieren</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--color-brand-secondary);">Quittungen & Belege</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold); width: 30%;">Was tun?</td>
+                            <td style="padding: 0.75rem 0;">Beleg fotografieren oder scannen und an belege@va-os.io senden</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">Vorteil</td>
+                            <td style="padding: 0.75rem 0;">Keine verlorenen Kassenzettel mehr, alles digital archiviert</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">Tipp</td>
+                            <td style="padding: 0.75rem 0;">Am besten direkt nach dem Einkauf fotografieren und senden</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-brand-accent);">Verträge</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold); width: 30%;">Was tun?</td>
+                            <td style="padding: 0.75rem 0;">Unterschriebene Verträge als PDF an belege@va-os.io senden</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">Vorteil</td>
+                            <td style="padding: 0.75rem 0;">Schnelle Suche nach bestimmten Klauseln oder Vertragsnummern</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem 0; font-weight: var(--font-weight-bold);">Hinweis</td>
+                            <td style="padding: 0.75rem 0;">Vertrauliche Verträge ggf. separat in Nextcloud ablegen</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zugang Section -->
+        <section class="section-narrow">
+            <div class="container">
+                <h2>Zugang zum Archiv</h2>
+                <p style="margin-bottom: 2rem;">
+                    Du kannst das Paperless-Archiv direkt im Browser aufrufen, um Dokumente zu suchen und zu verwalten.
+                </p>
+
+                <div class="card">
+                    <h3>Web-Zugang</h3>
+                    <ol style="padding-left: 1.5rem; margin-top: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Öffne <a href="https://paperless.vitale-arbeitskultur.de" target="_blank">paperless.vitale-arbeitskultur.de</a></li>
+                        <li style="margin-bottom: 0.5rem;">Melde dich mit deinen Zugangsdaten an</li>
+                        <li style="margin-bottom: 0.5rem;">Nutze die Suchfunktion oder browse durch die Kategorien</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tipps Section -->
+        <section class="section-narrow" style="background: #f8f8f8;">
+            <div class="container">
+                <h2>Tipps für bessere Ergebnisse</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div class="card">
+                        <h3>PDF bevorzugen</h3>
+                        <p>Wenn möglich, sende Dokumente als PDF. Das liefert die besten OCR-Ergebnisse und kleinere Dateien.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Gute Bildqualität</h3>
+                        <p>Bei Fotos von Belegen: Ausreichend Licht, gerader Winkel, ganzes Dokument im Bild. Unschärfe vermeiden.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Beschreibender Betreff</h3>
+                        <p>Ein aussagekräftiger E-Mail-Betreff hilft bei der späteren Suche (z.B. "Rechnung Büromaterial Dezember 2025").</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vitale Arbeitskultur. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+</html>

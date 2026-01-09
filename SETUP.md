@@ -122,4 +122,4 @@ vitale-arbeitskultur/va-pages (ÖFFENTLICH)
 
 ---
 
-**Bei Fragen:** info@vitalearbeits-kultur.de
+**Bei Fragen:** kontakt@vitale-arbeitskultur.de
